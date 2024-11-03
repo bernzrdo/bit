@@ -1,5 +1,9 @@
 import { Time } from './schemas/time'
-import { Class, Course, CourseInfo, Professor } from './schemas/types'
+import { Class, Course, CourseInfo } from './schemas/types'
+
+export const GUILD_ID = '1288033262404505620';
+export const WELCOME_CHANNEL_ID = '1288033262404505623';
+export const ANNOUNCEMENTS_CHANNEL_ID = '1302604976538914856';
 
 export const DEFAULT_COLOR = 0x9b3324;
 

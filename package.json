@@ -3,8 +3,9 @@
         "start": "bun index.ts",
         "register": "bun commands.ts"
     },
-  "dependencies": { "discord.js": "^14.16.3", "dotenv": "^16.4.5", "mineflayer": "^4.23.0", "node-schedule": "^2.1.1" },
-  "devDependencies": {
-    "@types/node-schedule": "^2.1.7"
-  }
+    "dependencies": { "discord.js": "^14.16.3", "dotenv": "^16.4.5", "mineflayer": "^4.23.0", "node-schedule": "^2.1.1" },
+    "devDependencies": {
+        "@types/node": "^22.8.7",
+        "@types/node-schedule": "^2.1.7"
+    }
 }

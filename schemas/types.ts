@@ -23,3 +23,7 @@ export interface Professor {
     name: string;
     url: string;
 }
+
+export interface Preferences {
+    silencedAnnounceSuggestions: boolean;
+}

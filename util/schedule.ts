@@ -1,6 +1,7 @@
 import { RecurrenceSpecObjLit } from 'node-schedule';
-import { SCHEDULE } from '../constants';
+import { COURSE_INFO, DEFAULT_COLOR, SCHEDULE } from '../constants';
 import { Class } from '../schemas/types';
+import { EmbedBuilder } from 'discord.js';
 
 function getClassAt(date: Date): Class | undefined {
     if(!date) date = new Date();
@@ -60,4 +61,23 @@ export function getScheduleSpecs(){
     }
 
     return specs;
+}
+
+export function classEmbed(class_: Class){
+
+    let info = COURSE_INFO[class_.course];
+
+    return new EmbedBuilder()
+        .setColor(DEFAULT_COLOR)
+        .setTitle(class_.course)
+        .setDescription(`*${info.name}*`)
+        .setURL(info.url)
+        .setAuthor({
+            name: info.professor.name,
+            url: info.professor.url
+        })
+        .addFields({
+            name: 'Sala',
+            value: class_.classroom
+        })
 }
