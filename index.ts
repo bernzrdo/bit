@@ -6,8 +6,6 @@ import { Class } from './schemas/types';
 import { Time } from './schemas/time';
 import { COURSE_INFO, DEFAULT_COLOR } from './constants';
 
-// ---------- DISCORD ----------
-
 const bot = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 function updateCurrentClass(){
