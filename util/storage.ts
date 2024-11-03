@@ -43,7 +43,7 @@ export class Storage<T> {
     async #save(){
         let dir = dirname(this.#path);
         await mkdir(dir, { recursive: true });
-        return writeFile(this.#path, JSON.stringify(this.#cache));
+        return writeFile(this.#path, JSON.stringify(this.#cache, null, 2));
     }
 
     #reset(){

@@ -1,6 +1,15 @@
+import { z } from 'zod';
 import { Time } from './time';
 
 export type Course = 'CDI' | 'TMD' | 'LSD' | 'PG' | 'E';
+
+export const courseSchema = z.union([
+    z.literal('CDI'),
+    z.literal('TMD'),
+    z.literal('LSD'),
+    z.literal('PG'),
+    z.literal('E')
+]);
 
 export interface CourseInfo {
     name: string;
@@ -8,16 +17,12 @@ export interface CourseInfo {
     professor: Professor;
 }
 
-export type Classroom = 'C.1.07' | 'F.0.46' | 'F.1.04' | 'G.0.14' | 'F.0.47';
-
 export type Class = {
     course: Course;
-    classroom: Classroom;
+    classroom: string;
     starts: Time;
     ends: Time;
 }
-
-export type Gender = 'male' | 'female' | 'nonbinary'
 
 export interface Professor {
     name: string;
@@ -27,3 +32,19 @@ export interface Professor {
 export interface Preferences {
     silencedAnnounceSuggestions: boolean;
 }
+
+export interface Event {
+    title?: string;
+    course?: Course;
+    type: string;
+    date: Date;
+    duration?: number;
+}
+
+export const eventSchema = z.object({
+    title: z.string().optional(),
+    course: courseSchema.optional(),
+    type: z.string(),
+    date: z.coerce.date(),
+    duration: z.coerce.number().optional()
+})

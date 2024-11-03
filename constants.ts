@@ -1,7 +1,9 @@
 import { Time } from './schemas/time'
 import { Class, Course, CourseInfo } from './schemas/types'
 
+export const BOT_ID = '1296418789281235036';
 export const GUILD_ID = '1288033262404505620';
+export const TEST_GUILD_ID = '1147082837107933194';
 export const WELCOME_CHANNEL_ID = '1288033262404505623';
 export const ANNOUNCEMENTS_CHANNEL_ID = '1302604976538914856';
 
