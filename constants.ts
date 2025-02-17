@@ -17,7 +17,7 @@ export const SCHEDULE: Class[][] = [
     // segunda-feira
     [
         { course: 'AED', classroom: 'C.1.07', starts: new Time(9, 30), ends: new Time(12, 30) },
-        { course: 'AC', classroom: 'C.1.07', starts: new Time(12, 30), ends: new Time(14, 0) }
+        { course: 'AC', classroom: 'E.3.15', starts: new Time(12, 30), ends: new Time(14, 0) }
     ],
     
     // terça-feira
