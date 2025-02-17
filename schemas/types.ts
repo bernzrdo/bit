@@ -1,14 +1,20 @@
 import { z } from 'zod';
 import { Time } from './time';
 
-export type Course = 'CDI' | 'TMD' | 'LSD' | 'PG' | 'E';
+export type Course = 'ALGA' | 'AED' | 'AC' | 'LIC' | 'RC';
+// export type Course = 'CDI' | 'TMD' | 'LSD' | 'PG' | 'E';
 
 export const courseSchema = z.union([
-    z.literal('CDI'),
-    z.literal('TMD'),
-    z.literal('LSD'),
-    z.literal('PG'),
-    z.literal('E')
+    z.literal('ALGA'),
+    z.literal('AED'),
+    z.literal('AC'),
+    z.literal('LIC'),
+    z.literal('RC')
+    // z.literal('CDI'),
+    // z.literal('TMD'),
+    // z.literal('LSD'),
+    // z.literal('PG'),
+    // z.literal('E')
 ]);
 
 export interface CourseInfo {

@@ -16,32 +16,33 @@ export const SCHEDULE: Class[][] = [
     
     // segunda-feira
     [
-        { course: 'LSD', classroom: 'F.0.46', starts: new Time(8, 0), ends: new Time(11, 0) },
-        { course: 'TMD', classroom: 'C.1.07', starts: new Time(11, 0), ends: new Time(12, 30) },
-        { course: 'E', classroom: 'F.1.04', starts: new Time(12, 30), ends: new Time(14, 0) }
+        { course: 'AED', classroom: 'C.1.07', starts: new Time(9, 30), ends: new Time(12, 30) },
+        { course: 'AC', classroom: 'C.1.07', starts: new Time(12, 30), ends: new Time(14, 0) }
     ],
     
     // terça-feira
     [
-        { course: 'TMD', classroom: 'C.1.07', starts: new Time(8, 0), ends: new Time(11, 0) },
-        { course: 'CDI', classroom: 'C.1.07', starts: new Time(11, 0), ends: new Time(12, 30) },
-        { course: 'LSD', classroom: 'F.1.04', starts: new Time(12, 30), ends: new Time(14, 0) }
+        { course: 'ALGA', classroom: 'C.1.07', starts: new Time(8, 0), ends: new Time(9, 30) },
+        { course: 'RC', classroom: 'C.1.07', starts: new Time(9, 30), ends: new Time(11, 0) },
+        { course: 'AC', classroom: 'E.3.15', starts: new Time(11, 0), ends: new Time(12, 30) }
     ],
     
     // quarta-feira
     [
-        { course: 'PG', classroom: 'G.0.14', starts: new Time(8, 0), ends: new Time(11, 0) },
-        { course: 'E', classroom: 'C.1.07', starts: new Time(11, 0), ends: new Time(14, 0) }
+        { course: 'ALGA', classroom: 'C.1.07', starts: new Time(8, 0), ends: new Time(11, 0) },
+        { course: 'AC', classroom: 'F.0.46', starts: new Time(11, 0), ends: new Time(12, 30) }
     ],
     
     // quinta-feira
     [
-        { course: 'CDI', classroom: 'C.1.07', starts: new Time(8, 0), ends: new Time(11, 0) },
-        { course: 'PG', classroom: 'C.1.07', starts: new Time(11, 0), ends: new Time(12, 30) }
+        { course: 'RC', classroom: 'F.1.04', starts: new Time(8, 0), ends: new Time(11, 0) },
+        { course: 'AED', classroom: 'C.1.08', starts: new Time(11, 0), ends: new Time(12, 30) }
     ],
     
     // sexta-feira
-    [],
+    [
+        { course: 'LIC', classroom: 'F.-1.09', starts: new Time(8, 0), ends: new Time(12, 30) }
+    ],
     
     // sábado
     []
@@ -49,44 +50,84 @@ export const SCHEDULE: Class[][] = [
 ]
 
 export const COURSE_INFO: Record<Course, CourseInfo> = {
-    CDI: {
-        name: 'Cálculo Diferencial e Integral',
-        url: 'https://www.isel.pt/leic/calculo-diferencial-e-integral',
+    ALGA: {
+        name: 'Álgebra Linear e Geometria Analítica',
+        url: 'https://www.isel.pt/leic/algebra-linear-e-geometria-analitica',
         professor: {
-            name: 'Jocelyn Lochon',
-            url: 'https://www.isel.pt/docentes/jocelyn-lochon'
+            name: 'Elisa Pereira',
+            url: 'https://www.isel.pt/docentes/maria-elisa-viegas-marques-pereira'
         }
     },
-    TMD: {
-        name: 'Tópicos de Matemática Discreta',
-        url: 'https://www.isel.pt/leic/topicos-de-matematica-discreta',
+    AED: {
+        name: 'Algoritmos e Estruturas de Dados',
+        url: 'https://www.isel.pt/leic/algoritmos-e-estruturas-de-dados',
         professor: {
-            name: 'Laura D\'Azevedo',
-            url: 'https://www.isel.pt/docentes/laura-cristina-teixeira-iglesias-charters-de-azevedo'
+            name: 'Paula Graça',
+            url: 'https://isel.pt/docentes/maria-paula-de-brito-graca'
         }
     },
-    LSD: {
-        name: 'Lógica e Sistemas Digitais',
-        url: 'https://www.isel.pt/leic/logica-e-sistemas-digitais',
+    AC: {
+        name: 'Arquitetura de Computadores',
+        url: 'https://www.isel.pt/leic/arquitetura-de-computadores',
+        professor: {
+            name: 'João Patriarca',
+            url: 'https://www.isel.pt/docentes/joao-pedro-guerreiro-da-graca-patriarca'
+        }
+    },
+    LIC: {
+        name: 'Laboratório de Informática e Computadores',
+        url: 'https://www.isel.pt/leic/laboratorio-de-informatica-e-computadores',
         professor: {
             name: 'Rogério Rebelo',
             url: 'https://www.isel.pt/docente/rogerio-alexandre-botelho-campos-rebelo'
         }
     },
-    PG: {
-        name: 'Programação',
-        url: 'https://www.isel.pt/leic/programacao',
+    RC: {
+        name: 'Redes de Computadores',
+        url: 'https://www.isel.pt/leic/redes-de-computadores',
         professor: {
-            name: 'Cátia Vaz',
-            url: 'https://www.isel.pt/docentes/catia-raquel-jesus-vaz'
-        }
-    },
-    E: {
-        name: 'Eletrónica',
-        url: 'https://www.isel.pt/leic/eletronica',
-        professor: {
-            name: 'João Martins',
-            url: 'https://www.isel.pt/docentes/joao-manuel-ferreira-martins'
+            name: 'Diego Passos',
+            url: 'https://www.isel.pt/docente/diego-gimenez-passos'
         }
     }
+    // CDI: {
+    //     name: 'Cálculo Diferencial e Integral',
+    //     url: 'https://www.isel.pt/leic/calculo-diferencial-e-integral',
+    //     professor: {
+    //         name: 'Jocelyn Lochon',
+    //         url: 'https://www.isel.pt/docentes/jocelyn-lochon'
+    //     }
+    // },
+    // TMD: {
+    //     name: 'Tópicos de Matemática Discreta',
+    //     url: 'https://www.isel.pt/leic/topicos-de-matematica-discreta',
+    //     professor: {
+    //         name: 'Laura D\'Azevedo',
+    //         url: 'https://www.isel.pt/docentes/laura-cristina-teixeira-iglesias-charters-de-azevedo'
+    //     }
+    // },
+    // LSD: {
+    //     name: 'Lógica e Sistemas Digitais',
+    //     url: 'https://www.isel.pt/leic/logica-e-sistemas-digitais',
+    //     professor: {
+    //         name: 'Rogério Rebelo',
+    //         url: 'https://www.isel.pt/docente/rogerio-alexandre-botelho-campos-rebelo'
+    //     }
+    // },
+    // PG: {
+    //     name: 'Programação',
+    //     url: 'https://www.isel.pt/leic/programacao',
+    //     professor: {
+    //         name: 'Cátia Vaz',
+    //         url: 'https://www.isel.pt/docentes/catia-raquel-jesus-vaz'
+    //     }
+    // },
+    // E: {
+    //     name: 'Eletrónica',
+    //     url: 'https://www.isel.pt/leic/eletronica',
+    //     professor: {
+    //         name: 'João Martins',
+    //         url: 'https://www.isel.pt/docentes/joao-manuel-ferreira-martins'
+    //     }
+    // }
 }
